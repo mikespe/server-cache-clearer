@@ -21,7 +21,7 @@ function showBadge(tabId, token) {
   const text = badgeText(token ?? '');
   chrome.action.setBadgeText({ tabId, text });
   if (text) {
-    chrome.action.setBadgeBackgroundColor({ tabId, color: '#0F766E' });
+    chrome.action.setBadgeBackgroundColor({ tabId, color: '#0B3B34' });
     if (chrome.action.setBadgeTextColor) {
       chrome.action.setBadgeTextColor({ tabId, color: '#FFFFFF' });
     }

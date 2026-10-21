@@ -28,7 +28,7 @@ Values match case-insensitively (`CACHE=CLEAR` counts). The new value is always 
 
 A normal URL is **not** rewritten on first visit. After `cache=clear` or `cache=clearN` is present, each later reload, or each navigation that opens such a URL, bumps the number once before the page is shown. The extension records the exact URL it just assigned for that tab and lets that navigation through unchanged, so its own redirect does not chain. The next refresh or visit bumps again.
 
-The toolbar badge shows the applied token in a short form: `clear`, `c2`, `c3`, `c10`, and so on.
+The toolbar badge shows only the number: `1` for `clear`, `2` for `clear2`, `10` for `clear10`, and so on.
 
 ## Permissions
 
@@ -48,7 +48,7 @@ Bust server and CDN caches by changing a cache query parameter. Does not clear C
 
 Cache Clearer reloads the current tab with a `cache` query parameter so a server or CDN fetches a fresh response. It does not clear Chrome's disk cache, cookies, or site data.
 
-Click the icon or press Alt+Shift+C to set `cache=clear`. Each later refresh bumps it: `clear`, then `clear2`, `clear3`, and so on. The badge shows the token that was applied. No account, no analytics, no payments.
+Click the icon or press Alt+Shift+C to set `cache=clear`. Each later refresh bumps it: `clear`, then `clear2`, `clear3`, and so on. The badge shows only that number. No account, no analytics, no payments.
 
 ## Development
 

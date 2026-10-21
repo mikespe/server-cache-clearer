@@ -165,11 +165,14 @@ describe('navigation guard', () => {
 });
 
 describe('badgeText', () => {
-  test('shortens clearN and leaves clear as clear', () => {
-    assert.equal(badgeText('clear'), 'clear');
-    assert.equal(badgeText('clear2'), 'c2');
-    assert.equal(badgeText('clear3'), 'c3');
-    assert.equal(badgeText('clear10'), 'c10');
-    assert.equal(badgeText('clear11'), 'c11');
+  test('shows only the number, with clear as 1', () => {
+    assert.equal(badgeText('clear'), '1');
+    assert.equal(badgeText('clear2'), '2');
+    assert.equal(badgeText('clear3'), '3');
+    assert.equal(badgeText('clear10'), '10');
+    assert.equal(badgeText('clear11'), '11');
+    assert.equal(badgeText('clear').includes('clear'), false);
+    assert.equal(badgeText('clear2').includes('c'), false);
+    assert.equal(badgeText(''), '');
   });
 });

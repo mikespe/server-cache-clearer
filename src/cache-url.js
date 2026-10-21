@@ -22,13 +22,15 @@ export function nextCacheToken(value) {
 }
 
 /**
+ * Toolbar badge is a number only. Chrome cannot shrink the badge font, so
+ * `clear` is `1`, `clear2` is `2`, and `clear10` is `10`.
  * @param {string} token
  * @returns {string}
  */
 export function badgeText(token) {
-  if (token === 'clear') return 'clear';
+  if (token === 'clear') return '1';
   const match = /^clear(\d+)$/.exec(token ?? '');
-  return match ? `c${match[1]}` : '';
+  return match ? match[1] : '';
 }
 
 /**
