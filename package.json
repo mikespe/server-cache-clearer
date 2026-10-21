@@ -1,0 +1,14 @@
+{
+  "name": "cache-clearer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension that busts server and CDN caches by bumping a cache query parameter.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

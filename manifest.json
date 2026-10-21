@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Cache Clearer",
+  "version": "1.0.0",
+  "description": "Bust server and CDN caches by changing a cache query parameter. Does not clear Chrome's disk cache.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Bust server/CDN cache",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["webNavigation", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+C",
+        "mac": "Alt+Shift+C"
+      },
+      "description": "Bust server/CDN cache on the current tab"
+    }
+  }
+}
